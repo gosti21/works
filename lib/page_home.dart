@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'pokemon_details.dart'; // Importamos la pantalla de detalles
+import 'pokemon_details.dart';
 
 // Clase para representar cada Pokémon
 class Pokemon {
@@ -14,7 +14,7 @@ class Pokemon {
   // Obtener la ID del Pokémon a partir de la URL
   static String _extractId(String url) {
     final parts = url.split('/');
-    return parts[parts.length - 2]; // Extrae el penúltimo segmento (la ID)
+    return parts[parts.length - 2];
   }
 
   // Crear una lista de Pokémons a partir de la respuesta de la API
@@ -43,7 +43,7 @@ class _PageHomeState extends State<PageHome> {
   @override
   void initState() {
     super.initState();
-    _fetchPokemons(); // Llamamos a la función para obtener los pokémons al iniciar la pantalla
+    _fetchPokemons();
   }
 
   // Función para obtener los Pokémon desde la PokéAPI
@@ -93,7 +93,7 @@ class _PageHomeState extends State<PageHome> {
                         builder: (context) => PokemonDetails(
                           pokemonName: pokemon.name,
                           pokemonImage: pokemon.imageUrl,
-                          pokemonUrl: pokemon.url, // Pasamos la URL aquí
+                          pokemonUrl: pokemon.url,
                         ),
                       ),
                     );

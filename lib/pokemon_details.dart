@@ -23,8 +23,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
 
   // Función para obtener las estadísticas del Pokémon
   Future<void> _fetchPokemonStats() async {
-    final response = await http
-        .get(Uri.parse(widget.pokemonUrl)); // Usamos la URL que recibimos
+    final response = await http.get(Uri.parse(widget.pokemonUrl));
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);

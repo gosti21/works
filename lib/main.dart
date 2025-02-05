@@ -6,17 +6,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key})
-      : super(key: key); // Asegúrate de que MyApp sea un StatelessWidget
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Poke API',
       theme: ThemeData(
-        primarySwatch: Colors.blue, // Tema básico de color azul
+        primarySwatch: Colors.blue,
       ),
-      home: WelcomeScreen(), // Aquí especificas la pantalla principal
+      home: WelcomeScreen(),
     );
   }
 }
@@ -36,7 +35,6 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // El icono ha sido eliminado
             SizedBox(height: 20),
             Text(
               'BIENVENIDO A LA POKE API',
@@ -51,7 +49,6 @@ class WelcomeScreen extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Navegar a PageHome cuando se presiona el botón
                     Navigator.push(
                       context,
                       MaterialPageRoute(
