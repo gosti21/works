@@ -86,13 +86,14 @@ class _PageHomeState extends State<PageHome> {
                   leading: Image.network(pokemon.imageUrl), // Mostrar la imagen
                   title: Text(pokemon.name),
                   onTap: () {
-                    // Navegar a la página de detalles
+                    // Navegar a la página de detalles, pasamos la URL del Pokémon
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => PokemonDetails(
                           pokemonName: pokemon.name,
                           pokemonImage: pokemon.imageUrl,
+                          pokemonUrl: pokemon.url, // Pasamos la URL aquí
                         ),
                       ),
                     );
